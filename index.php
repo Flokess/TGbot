@@ -1,4 +1,5 @@
 <?php
+//1252510650
     const TOKEN = '5722929443:AAEfUvl5lXHiPqe8iVYcvp54bLBRfSJXTns';
 
     $url = 'https://api.telegram.org/bot' . TOKEN . '/getUpdates';
