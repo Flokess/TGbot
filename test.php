@@ -17,11 +17,11 @@ function sendRequest($method, $params = []){
 
 $updates = sendRequest('getUpdates');
 
-$today = date("F j, Y, g:i a");
+$today = date("F j, Y, g:i a",strtotime('+ 3 hour'));
 
 foreach ($updates['result'] as $update){
     $chat_id = $update['message']['chat']['id'];
-    sendRequest('sendMessage', ['chat_id' => $chat_id, 'text' => $today ]);
+    sendRequest('sendMessage', ['chat_id' => $chat_id, 'text' =>"Привет ты ". $today]);
 }
 
 //var_dump(sendRequest('sendMessage', ['chat_id' => 1252510650, 'text' => 'Проба']));
